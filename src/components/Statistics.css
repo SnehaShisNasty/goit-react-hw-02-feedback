@@ -1,0 +1,29 @@
+.statistics {
+  margin-top: 40px;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  margin: 0 30px 30px 0;
+}
+
+.subTitle {
+  text-align: center;
+  margin: 0;
+  font-size: 20px;
+  color: #555;
+}
