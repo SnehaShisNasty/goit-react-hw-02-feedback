@@ -12,7 +12,9 @@
 .item {
   margin: 0 20px;
 }
+
 .button {
+  background-color: grey;
   padding: 15px 25px;
   font-size: 18px;
   color: #fff;
@@ -20,18 +22,6 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.button.good {
-  background-color: #4caf50;
-}
-
-.button.neutral {
-  background-color: #f0ad4e;
-}
-
-.button.bad {
-  background-color: #d9534f;
 }
 
 .button:hover {

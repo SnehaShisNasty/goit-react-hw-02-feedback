@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Section } from './Section';
+import { Section } from './section/Section';
 
 class Feedback extends Component {
   state = {
@@ -8,20 +8,12 @@ class Feedback extends Component {
     bad: 0,
   };
 
-  handleIncrementGood = () => {
-    this.setState(prevState => ({
-      good: prevState.good + 1,
-    }));
-  };
-  handleIncrementNeutral = () => {
-    this.setState(prevState => ({
-      neutral: prevState.neutral + 1,
-    }));
-  };
-  handleIncrementBad = () => {
-    this.setState(prevState => ({
-      bad: prevState.bad + 1,
-    }));
+  handleIncrementFeedback = name => {
+    this.setState(prevState => {
+      return {
+        [name]: prevState[name] + 1,
+      };
+    });
   };
 
   render() {
@@ -33,9 +25,10 @@ class Feedback extends Component {
     return (
       <Section
         title={'Please leave your Feedback'}
-        handleIncrementGood={this.handleIncrementGood}
-        handleIncrementNeutral={this.handleIncrementNeutral}
-        handleIncrementBad={this.handleIncrementBad}
+        handleIncrementFeedback={this.handleIncrementFeedback}
+        good={good}
+        neutral={neutral}
+        bad={bad}
         result={this.state}
         total={countTotalFeedback}
         positive={countPositiveFeedbackPercentage}
